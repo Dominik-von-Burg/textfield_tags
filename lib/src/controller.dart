@@ -158,13 +158,6 @@ class TextfieldTagsController<T> extends TextfieldTagsNotifier<T> {
     TextEditingController? textEditingController,
     ScrollController? scrollController,
   ) {
-    assert(
-      (_tags == null &&
-          _textSeparators == null &&
-          _letterCase == null &&
-          _validator == null),
-      'You\'ve already registered a tag controller',
-    );
     _tags = initialTags != null ? initialTags.toList() : [];
     _textSeparators = textSeparators != null ? textSeparators.toSet() : {};
     _letterCase = letterCase ?? LetterCase.normal;
